@@ -29,7 +29,7 @@
 /* left side */
 
 .picture{
-    background-image: url(./space-g1e38f8dc5_1920.jpg);
+    background-image: url(./CityPixel.gif);
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -73,13 +73,13 @@ h1{
 }
 
 .left{
-    padding-left: 3vw;
+    padding-left: 5vw;
 }
 
 .dummy-text{
-    font-weight: 500;
+    font-weight: bolder;
     width: 90%;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 .remote-text{
@@ -91,14 +91,15 @@ h1{
 
 .form{
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px -2px rgb(22, 22, 22);
+    box-shadow: 0 8px 50px -2px var(--color);
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 
 .input{
     display: flex;
@@ -116,14 +117,14 @@ h1{
 }
 
 input{
-    background-color: rgb(2, 2, 2);
-    border: 1px solid rgb(77, 77, 77);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 3px;
 }
 
 input:focus{
     outline: none;
-    border: 2px solid var(--color);
+    border: 3px solid var(--color);
 }
 
 button{
@@ -155,7 +156,7 @@ a{
 }
 
 a:hover{
-    color: white;
+    color:cadetblue;
 }
 
 
@@ -203,7 +204,6 @@ a:hover{
     .form{
         flex-flow: column nowrap;
         align-items: center;
-
     }
     .input{
         text-align: left;
@@ -229,4 +229,11 @@ a:hover{
         padding: 10px 5px;
     }
 
+}
+@media only screen and (min-width: 768px) {
+    .dummy-text{
+        font-weight: bolder;
+        width: 90%;
+        font-size: 1.6em;
+    }
 }
