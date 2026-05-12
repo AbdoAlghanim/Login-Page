@@ -50,7 +50,7 @@
     padding: 15px 0;
     border-top: 1px solid var(--cyber-blue);
     border-bottom: 1px solid var(--cyber-blue);
-
+    padding-bottom: 10%;
     justify-content: center;
     align-items: center;
     box-shadow: var(--accent-glow);
@@ -219,6 +219,10 @@ a:hover{
         position: static;
         gap: 10px;
         top: 0;
+    }
+    h1{
+        padding-top: 5vh;
+        padding-bottom: 15vh;
     }
     .right{
         width: auto;
