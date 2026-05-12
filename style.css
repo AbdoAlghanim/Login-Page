@@ -83,6 +83,7 @@ h1{
     width: 90%;
     font-size: 1.2em;
     line-height: 1.5;
+    padding-top: 10vh;
 }
 
 .remote-text{
@@ -150,6 +151,7 @@ button:hover{
 .log-in{
     display: flex;
     gap: 5px;
+    padding-bottom: 10vh;
 }
 
 a{
