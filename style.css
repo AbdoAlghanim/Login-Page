@@ -1,6 +1,11 @@
 :root{
-    --color: #6b7bd1;
-    --txt: rgb(0, 0, 0);
+    --primary-color: #9d50bb;
+    --secondary-color: #6e48aa;
+    --cyber-blue: #00d2ff;
+    --bg-dark: #0f0c29;
+    --bg-darker: #050510;
+    --text-light: #f0f0f0;
+    --accent-glow: 0 0 10px rgba(157, 80, 187, 0.5), 0 0 20px rgba(0, 210, 255, 0.3);
 }
 
 *{
@@ -8,13 +13,11 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: var(--txt);
-
-    /* outline: 1px solid red; */
+    color: var(--text-light);
 }
 
 .content {
-    background-color: white;
+    background-color: var(--bg-darker);
     width: 100vw;
     height: 100vh;
 }
@@ -31,47 +34,46 @@
 .picture{
     background-image: url(./CityPixel.gif);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 40vw;
+    border-right: 2px solid var(--primary-color);
 }
 
 
 .logo{
     height: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(5, 5, 16, 0.8);
     position: relative;
     top: 20vh;
     gap: 1vw;
     padding: 15px 0;
+    border-top: 1px solid var(--cyber-blue);
+    border-bottom: 1px solid var(--cyber-blue);
 
     justify-content: center;
     align-items: center;
+    box-shadow: var(--accent-glow);
 }
 
 h1{
-    color: white;
+    color: var(--cyber-blue);
     padding-top:10vh;
     padding-bottom:10vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--cyber-blue);
 }
-
-
-
-
-
-
 
 
 /* right side */
 
 .right{
     width: 60vw;
-    background-color: white;
+    background-color: var(--bg-dark);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    
-
 }
 
 .left{
@@ -79,28 +81,38 @@ h1{
 }
 
 .dummy-text{
-    font-weight: bolder;
+    font-weight: 300;
     width: 90%;
     font-size: 1.2em;
     line-height: 1.5;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .remote-text{
-    margin: 40px 0 80px;
+    margin: 40px 0 60px;
+    color: var(--cyber-blue);
+}
+
+.cyber-gradient {
+    background: linear-gradient(45deg, #9d50bb, #6e48aa, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
 /* form */
 
 .form{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 8px 50px -2px var(--color);
+    background-color: rgba(15, 12, 41, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(157, 80, 187, 0.2);
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px;
     margin-bottom: 20px;
 }
 
@@ -109,59 +121,74 @@ h1{
     display: flex;
     flex-flow: column wrap;
     width: 40%;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    opacity: 50%;
+    letter-spacing: 1px;
+}
+
+.input label {
+    color: var(--cyber-blue);
+    margin-bottom: 5px;
 }
 
 .form-title{
     width: 100%;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 input{
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 8px;
+    color: white;
 }
 
 input:focus{
     outline: none;
-    border: 3px solid var(--color);
+    border: 1px solid var(--cyber-blue);
+    box-shadow: 0 0 8px var(--cyber-blue);
 }
 
 button{
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--color);
+    background-color: transparent;
+    color: var(--text-light);
     font-weight: 700;
-    font-size: 1.2em;
-    border: 2px solid var(--color);
-    border-radius: 5px;
-    padding: 10px 40px;
-    margin: 40px 0;
+    font-size: 1.1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 12px 45px;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button:hover{
-    background-color: var(--color);
-    color: black;
-    
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 15px var(--primary-color);
 }
 
 .log-in{
     display: flex;
     gap: 5px;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 }
 
 a{
     text-decoration: none;
-    color: var(--color);
+    color: var(--cyber-blue);
     font-weight: 700;
 }
 
 a:hover{
-    color:cadetblue;
+    text-shadow: 0 0 5px var(--cyber-blue);
 }
 
 
@@ -181,14 +208,17 @@ a:hover{
     }
     .picture{
         width: 100vw;
-        height: 15vh;
+        height: 25vh;
         display: flex;
-        background-size: 100vw;
+        background-size: cover;
+        border-right: none;
+        border-bottom: 2px solid var(--primary-color);
     }
     .logo{
         width: 100vw;
         position: static;
         gap: 10px;
+        top: 0;
     }
     .right{
         width: auto;
@@ -209,18 +239,19 @@ a:hover{
     .form{
         flex-flow: column nowrap;
         align-items: center;
+        background-color: var(--bg-dark);
     }
     .input{
         text-align: left;
-        width: auto;
+        width: 80%;
         font-size: 0.9em;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
     input{
         font-size: 0.9rem;
-        height: 1.5rem;
-        width: 70vw;
+        height: 2.5rem;
+        width: 100%;
     }
     .button,
     .log-in{
@@ -229,15 +260,15 @@ a:hover{
         margin-bottom: 0px;
     }
     button{
-        margin-bottom: 0px;
-        width: 60vw;
+        margin-bottom: 20px;
+        width: 80vw;
         padding: 10px 5px;
     }
 
 }
 @media only screen and (min-width: 768px) {
     .dummy-text{
-        font-weight: bolder;
+        font-weight: 300;
         width: 90%;
         font-size: 1.6em;
     }
